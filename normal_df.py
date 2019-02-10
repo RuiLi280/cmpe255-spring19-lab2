@@ -1,9 +1,10 @@
-from math import exp, pi, pow, sqrt
+from math import exp, pi, sqrt
 
 
 def normal_pdf(x, mu=0, sigma=1):
-    a = 1 / (sigma * sqrt(2 * pi))
-    p = - (pow((x - mu), 2)) / (2 * sigma * sigma)
+    # a = 1 / (sigma * sqrt(2 * pi))
+    a = 1 / (sqrt(2 * pi * sigma**2))
+    p = - ((x - mu)**2) / (2 * sigma**2)
     return a * exp(p)
 
 
